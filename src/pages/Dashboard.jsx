@@ -165,6 +165,7 @@ const Dashboard = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <p className="font-semibold">{user?.user_metadata.name}</p>
         </div>
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
@@ -346,7 +347,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-4">
                 <Avatar className="hidden h-9 w-9 sm:flex">
                   <AvatarImage
-                    src="Authentication/src/assets/avatars/02.png"
+                    src={avatar02}
                     alt="Avatar"
                   />
                   <AvatarFallback>JL</AvatarFallback>
@@ -360,7 +361,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-4">
                 <Avatar className="hidden h-9 w-9 sm:flex">
                   <AvatarImage
-                    src="Authentication/src/assets/avatars/03.png"
+                    src={avatar03}
                     alt="Avatar"
                   />
                   <AvatarFallback>IN</AvatarFallback>
@@ -374,7 +375,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-4">
                 <Avatar className="hidden h-9 w-9 sm:flex">
                   <AvatarImage
-                    src="Authentication/src/assets/avatars/04.png"
+                    src={avatar04}
                     alt="Avatar"
                   />
                   <AvatarFallback>WK</AvatarFallback>
@@ -388,7 +389,7 @@ const Dashboard = () => {
               <div className="flex items-center gap-4">
                 <Avatar className="hidden h-9 w-9 sm:flex">
                   <AvatarImage
-                    src="Authentication/src/assets/avatars/05.png"
+                    src={avatar05}
                     alt="Avatar"
                   />
                   <AvatarFallback>SD</AvatarFallback>
