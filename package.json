@@ -1,5 +1,6 @@
 {
-  "name": "nike",
+  "homepage": "https://mohammedatef1.github.io/Authentication/",
+  "name": "authentication",
   "private": true,
   "version": "0.0.0",
   "type": "module",
