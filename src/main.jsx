@@ -4,10 +4,12 @@ import { Toaster } from "react-hot-toast";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import Dashboard from "./pages/Dashboard";
+import ForgotPassword from "./pages/ForgotPassword";
 import Login from "./pages/Login";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import ProtectedSignRoute from "./pages/ProtectedSignRoute";
 import Register from "./pages/Register";
+import UpdatePassword from "./pages/UpdatePassword";
 
 const router = createBrowserRouter(
   [
@@ -32,6 +34,22 @@ const router = createBrowserRouter(
       element: (
         <ProtectedSignRoute>
           <Login />
+        </ProtectedSignRoute>
+      ),
+    },
+    {
+      path: "/forgotpassword",
+      element: (
+        <ProtectedSignRoute>
+          <ForgotPassword />
+        </ProtectedSignRoute>
+      ),
+    },
+    {
+      path: "/updatepassword",
+      element: (
+        <ProtectedSignRoute>
+          <UpdatePassword />
         </ProtectedSignRoute>
       ),
     },

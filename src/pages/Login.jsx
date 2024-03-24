@@ -67,9 +67,22 @@ const Login = () => {
             disabled={isLoading}
             className={`${errors.email ? "border-red-500" : ""}`}
             placeholder="Enter your email"
-            {...register("email", { required: "this field is required" })}
+            {...register("email", {
+              required: "this field is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email address",
+              },
+            })}
           />
-          <p className="text-slate-800 font-semibold text-md">Password</p>
+          <div className="flex items-center justify-between">
+            <p className="text-slate-800 font-semibold text-md">Password</p>
+            <Link
+              to="/forgotpassword"
+              className="text-slate-800 font-semibold text-md underline">
+              Forgot password?
+            </Link>
+          </div>
           <Input
             disabled={isLoading}
             className={`${errors.password ? "border-red-500" : ""}`}

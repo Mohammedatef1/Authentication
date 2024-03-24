@@ -4,10 +4,11 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const {
     register,
@@ -35,7 +36,8 @@ const Register = () => {
         toast.error("An error occured!");
         throw error;
       }
-      toast.success("Account created successfully");
+      toast.success("Account created successfully, Login with your account");
+      navigate("/login");
       console.log("Registration successful:", data);
     } catch (error) {
       console.error("Registration error:", error.message);
