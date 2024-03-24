@@ -47,11 +47,7 @@ const router = createBrowserRouter(
     },
     {
       path: "/updatepassword",
-      element: (
-        <ProtectedSignRoute>
-          <UpdatePassword />
-        </ProtectedSignRoute>
-      ),
+      element: <UpdatePassword />,
     },
   ],
   {

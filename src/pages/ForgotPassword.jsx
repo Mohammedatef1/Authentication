@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     try {
       setIsLoading(true);
       const { data, error } = await supabase.auth.resetPasswordForEmail(formData.email, {
-        redirectTo: "https://mohammedatef1.github.io/Authentication",
+        redirectTo: `${window.location.href.replace("forgotpassword", "")}updatepassword`,
       });
 
       if (error) {

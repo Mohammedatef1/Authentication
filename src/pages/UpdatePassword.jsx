@@ -21,6 +21,12 @@ const UpdatePassword = () => {
   const onSubmit = async (formData) => {
     try {
       setIsLoading(true);
+      const { data, error } = await supabase.auth.updateUser({ password: formData.password });
+      if (error) {
+        throw new Error();
+      }
+      console.log(data);
+      toast.success("passowrd updated successfully");
     } catch (error) {
       console.log(error);
     } finally {
